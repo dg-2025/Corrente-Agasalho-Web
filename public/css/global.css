@@ -1,0 +1,24 @@
+:root {
+    --cor-primaria: #4A2BFF;
+    --fundo-barra-lateral: #F8F9FD;
+    --cor-texto: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-aplicacao {
+    display: flex;
+    min-height: 100vh;
+}
+
+.conteudo-principal {
+    flex: 1;
+    padding: 30px;
+    background-color: #fff;
+    overflow-y: auto;
+}

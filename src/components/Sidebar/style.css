@@ -1,0 +1,76 @@
+.barra-lateral {
+    width: 280px;
+    background-color: #fcfcfc;
+    border-right: 1px solid #eee;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+}
+
+.texto-logo {
+    font-size: 1.5rem;
+    color: #00147e; /* Azul escuro conforme imagem */
+    padding: 0 20px 30px;
+    font-weight: bold;
+}
+
+.navegacao-barra-lateral {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.link-navegacao {
+    display: flex;
+    align-items: center;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.95rem;
+    gap: 12px;
+    transition: 0.2s;
+}
+
+.link-navegacao i {
+    width: 20px;
+}
+
+/* Estado ativo (selecionado) */
+.link-navegacao.ativo {
+    background-color: #f2f4ff;
+    color: #4A2BFF;
+    border-right: 4px solid #4A2BFF;
+}
+
+.divisor-barra-lateral {
+    height: 1px;
+    background-color: #eee;
+    margin: 15px 25px;
+}
+
+.titulo-secao-navegacao {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #999;
+    padding: 10px 25px;
+    letter-spacing: 1px;
+}
+
+.rodape-barra-lateral {
+    padding: 20px;
+}
+
+.botao-sair {
+    display: block;
+    width: 100%;
+    background-color: #d32f2f; /* Vermelho conforme imagem */
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
