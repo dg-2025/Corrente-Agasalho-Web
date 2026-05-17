@@ -1,0 +1,335 @@
+/* =============================================
+   DoacaoEntrada/style.css
+   Segue o padrão: --cor-primaria #4A2BFF, fonte Segoe UI
+   ============================================= */
+
+.pagina-doacao {
+    max-width: 860px;
+}
+
+/* --- Cabeçalho da página --- */
+.cabecalho-pagina {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.titulo-pagina {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #00147e;
+}
+
+.titulo-pagina i {
+    color: var(--cor-primaria);
+    width: 28px;
+    height: 28px;
+}
+
+.subtitulo-pagina {
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    margin-left: 38px;
+}
+
+.badge-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff8e1;
+    color: #b07a00;
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.badge-status i {
+    width: 16px;
+    height: 16px;
+}
+
+/* --- Mensagens de feedback --- */
+.mensagem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.mensagem i {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+}
+
+.mensagem-sucesso {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.mensagem-erro {
+    background-color: #fdecea;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+/* --- Card do formulário --- */
+.card-formulario {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* --- Layout das linhas de campos --- */
+.linha-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo-grupo-full {
+    margin-bottom: 20px;
+}
+
+/* --- Labels --- */
+.campo-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #555;
+    letter-spacing: 0.3px;
+}
+
+.campo-label i {
+    width: 15px;
+    height: 15px;
+    color: var(--cor-primaria);
+}
+
+/* --- Inputs e Selects --- */
+.campo-input {
+    padding: 10px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    background: #fafafa;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+    width: 100%;
+}
+
+.campo-input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 3px rgba(74, 43, 255, 0.08);
+    background: #fff;
+}
+
+.campo-textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: inherit;
+}
+
+.campo-hint {
+    font-size: 0.78rem;
+    color: #aaa;
+}
+
+/* --- Preview de pontos --- */
+.preview-pontos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f0edff, #e8f4ff);
+    border: 1.5px solid #c5b8ff;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    color: #3a1fc0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+}
+
+.preview-pontos i {
+    width: 20px;
+    height: 20px;
+    color: var(--cor-primaria);
+    flex-shrink: 0;
+}
+
+.destaque-pontos {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    margin: 0 4px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Botões --- */
+.linha-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 8px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.botao-primario,
+.botao-secundario {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 24px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.botao-primario:active,
+.botao-secundario:active {
+    transform: scale(0.98);
+}
+
+.botao-primario {
+    background-color: var(--cor-primaria);
+    color: #fff;
+}
+
+.botao-primario:hover {
+    opacity: 0.88;
+}
+
+.botao-secundario {
+    background-color: #f0f0f0;
+    color: #555;
+}
+
+.botao-secundario:hover {
+    background-color: #e4e4e4;
+}
+
+.botao-primario i,
+.botao-secundario i {
+    width: 17px;
+    height: 17px;
+}
+
+/* --- Info de fluxo --- */
+.info-fluxo {
+    background: #f8f9fd;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px 24px;
+}
+
+.info-fluxo h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.info-fluxo h4 i {
+    width: 16px;
+    height: 16px;
+    color: var(--cor-primaria);
+}
+
+.passos-fluxo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.passo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.passo-numero {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: var(--cor-primaria);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.seta-passo {
+    width: 16px;
+    height: 16px;
+    color: #bbb;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 640px) {
+    .linha-formulario {
+        grid-template-columns: 1fr;
+    }
+
+    .cabecalho-pagina {
+        flex-direction: column;
+    }
+
+    .card-formulario {
+        padding: 20px;
+    }
+
+    .passos-fluxo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .seta-passo {
+        transform: rotate(90deg);
+    }
+}
