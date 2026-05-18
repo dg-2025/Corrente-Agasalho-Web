@@ -1,0 +1,346 @@
+.pagina-pessoas {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cabecalho-pagina {
+    margin-bottom: 24px;
+}
+
+.titulo-pagina {
+    font-size: 1.8rem;
+    color: #00147e;
+    font-weight: 700;
+}
+
+.subtitulo-pagina {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+/* Layout Split Lateral */
+.container-gestao {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Painel Esquerdo: Listagem */
+.painel-lateral-lista {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+}
+
+.titulo-bloco-lista {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #00147e;
+    margin-bottom: 15px;
+}
+
+.container-busca {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-busca {
+    width: 100%;
+    padding: 10px 35px 10px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    outline: none;
+    background: #fafafa;
+}
+
+.icone-busca {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.lista-pessoas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.item-pessoa {
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: 0.2s;
+}
+
+.item-pessoa:hover {
+    background-color: #f5f6ff;
+}
+
+.item-pessoa.ativo {
+    background-color: #f2f4ff;
+    border-left: 4px solid #4A2BFF;
+}
+
+.nome-person-item, .nome-pessoa-item {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #00147e;
+}
+
+.doc-pessoa-item {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Painel Direito: Form */
+.painel-formulario-detalhes {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 0;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.02);
+    overflow: hidden;
+}
+
+/* Abas */
+.abas-navegacao {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.botao-aba {
+    padding: 15px 25px;
+    border: none;
+    background: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+    position: relative;
+    transition: 0.2s;
+}
+
+.botao-aba.ativa {
+    color: #4A2BFF;
+}
+
+.botao-aba.ativa::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4A2BFF;
+}
+
+/* Form */
+.formulario-pessoa {
+    padding: 30px;
+}
+
+.campo-grupo-full {
+    margin-bottom: 20px;
+}
+
+.linha-dupla-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.rotulo-campo {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #00147e;
+}
+
+.input-formulario {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #fff;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-formulario:focus {
+    border-color: #4A2BFF;
+}
+
+.campo-desabilitado {
+    background-color: #f2f2f2;
+    border-color: #e5e5e5;
+    color: #777;
+}
+
+.wrapper-input-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 6px;
+}
+
+/* Custom Checkbox */
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    cursor: pointer;
+    font-size: 22px;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border: 1.5px solid #bbb;
+    border-radius: 4px;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: #fff;
+    border-color: #4A2BFF;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid #4A2BFF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Seções Internas */
+.subsecao-titulo {
+    font-size: 0.9rem;
+    color: #00147e;
+    font-weight: 700;
+    margin: 25px 0 15px 0;
+}
+
+.linha-cep-busca {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.linha-cep-busca .campo-grupo {
+    width: 180px;
+}
+
+.botao-buscar-cep {
+    background-color: #4A2BFF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 44px;
+}
+
+/* Barra de Ações Inferior */
+.barra-acoes-formulario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.grupo-acoes-direita {
+    display: flex;
+    gap: 12px;
+}
+
+.botao-acao {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: opacity 0.2s;
+}
+
+.botao-acao:hover {
+    opacity: 0.9;
+}
+
+.acao-limpar {
+    background-color: #6c757d;
+    color: white;
+}
+
+.acao-excluir {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.acao-salvar {
+    background-color: #4A2BFF;
+    color: white;
+}
+
+/* Responsividade Básica */
+@media (max-width: 900px) {
+    .container-gestao {
+        grid-template-columns: 1fr;
+    }
+    .linha-dupla-formulario {
+        grid-template-columns: 1fr;
+    }
+}
